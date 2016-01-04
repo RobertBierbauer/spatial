@@ -30,7 +30,7 @@ import org.neo4j.graphdb.index.IndexCommandFactory;
 import org.neo4j.graphdb.index.LegacyIndexProviderTransaction;
 import org.neo4j.helpers.collection.IteratorUtil;
 import org.neo4j.kernel.api.LegacyIndex;
-import org.neo4j.kernel.impl.transaction.command.NeoCommandHandler;
+import org.neo4j.kernel.impl.transaction.command.CommandHandler;
 
 public class SpatialIndexImplementation implements IndexImplementation {
 
@@ -74,8 +74,8 @@ public class SpatialIndexImplementation implements IndexImplementation {
     }
 
     @Override
-    public NeoCommandHandler newApplier(boolean bln) {
-        return NeoCommandHandler.EMPTY;
+    public CommandHandler newApplier( boolean bln ) {
+        return CommandHandler.EMPTY;
     }
 
     @Override
@@ -91,22 +91,18 @@ public class SpatialIndexImplementation implements IndexImplementation {
 
 	@Override
 	public void init() throws Throwable {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 	@Override
 	public void start() throws Throwable {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 	@Override
 	public void stop() throws Throwable {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 	@Override
 	public void shutdown() throws Throwable {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 
 }
